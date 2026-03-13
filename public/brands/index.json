@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Pandora",
+    "slug": "pandora",
+    "count": 2075,
+    "images": 2075,
+    "size_kb": 2579.3
+  },
+  {
+    "name": "Steve Madden",
+    "slug": "steve-madden",
+    "count": 4614,
+    "images": 4610,
+    "size_kb": 905.3
+  },
+  {
+    "name": "Sephora",
+    "slug": "sephora",
+    "count": 3168,
+    "images": 3168,
+    "size_kb": 586.6
+  },
+  {
+    "name": "Michael Kors",
+    "slug": "michael-kors",
+    "count": 1061,
+    "images": 1061,
+    "size_kb": 4268.7
+  },
+  {
+    "name": "Coach",
+    "slug": "coach",
+    "count": 203,
+    "images": 0,
+    "size_kb": 20.1
+  },
+  {
+    "name": "Kate Spade",
+    "slug": "kate-spade",
+    "count": 230,
+    "images": 0,
+    "size_kb": 19.3
+  },
+  {
+    "name": "Tory Burch",
+    "slug": "tory-burch",
+    "count": 38,
+    "images": 0,
+    "size_kb": 3.5
+  },
+  {
+    "name": "Calvin Klein",
+    "slug": "calvin-klein",
+    "count": 568,
+    "images": 0,
+    "size_kb": 49.3
+  },
+  {
+    "name": "Tommy Hilfiger",
+    "slug": "tommy-hilfiger",
+    "count": 652,
+    "images": 0,
+    "size_kb": 58.2
+  },
+  {
+    "name": "Lululemon",
+    "slug": "lululemon",
+    "count": 1365,
+    "images": 0,
+    "size_kb": 126.7
+  },
+  {
+    "name": "Victoria's Secret",
+    "slug": "victorias-secret",
+    "count": 1000,
+    "images": 0,
+    "size_kb": 92.0
+  },
+  {
+    "name": "Ulta",
+    "slug": "ulta",
+    "count": 5332,
+    "images": 0,
+    "size_kb": 463.0
+  }
+]
