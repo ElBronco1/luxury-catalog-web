@@ -5,7 +5,8 @@
     "c": "Handbags Shoulder Bags",
     "f": "$379.00",
     "i": "/images/tory-burch/1-fleming-shoulder-bag.jpg",
-    "s": "Shoulder Bags"
+    "s": "Handbags Shoulder Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -13,7 +14,8 @@
     "c": "Handbags Clutches",
     "f": "$287.00",
     "i": "/images/tory-burch/2-reva-clutch.jpg",
-    "s": "Clutches"
+    "s": "Handbags Clutches",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -21,7 +23,8 @@
     "c": "Shoes Sandals",
     "f": "$149.00",
     "i": "/images/tory-burch/3-classic-flip-flop.jpg",
-    "s": "Sandals"
+    "s": "Shoes Sandals",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -29,7 +32,8 @@
     "c": "Handbags Crossbody Bags",
     "f": "$275.00",
     "i": "/images/tory-burch/4-mini-miller-denim-crossbody-bag.jpg",
-    "s": "Crossbody"
+    "s": "Handbags Crossbody Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -37,7 +41,8 @@
     "c": "Shoes Espadrilles",
     "f": "$172.00",
     "i": "/images/tory-burch/5-ines-platform-espadrille.jpg",
-    "s": "Shoes Espadrilles"
+    "s": "Shoes Espadrilles",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -45,7 +50,8 @@
     "c": "Shoes Sandals",
     "f": "$149.00",
     "i": "/images/tory-burch/6-miller-cloud-sandal.jpg",
-    "s": "Sandals"
+    "s": "Shoes Sandals",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -53,7 +59,8 @@
     "c": "Handbags Shoulder Bags",
     "f": "$402.00",
     "i": "/images/tory-burch/7-limited-edition-shoulder-bag.jpg",
-    "s": "Shoulder Bags"
+    "s": "Handbags Shoulder Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -61,7 +68,8 @@
     "c": "Handbags Shoulder Bags",
     "f": "$528.00",
     "i": "",
-    "s": "Shoulder Bags"
+    "s": "Handbags Shoulder Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -69,7 +77,8 @@
     "c": "Shoes Sandals",
     "f": "$137.00",
     "i": "",
-    "s": "Sandals"
+    "s": "Shoes Sandals",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -77,7 +86,8 @@
     "c": "Handbags Shoulder Bags",
     "f": "$344.00",
     "i": "/images/tory-burch/10-small-kira-chevron-shoulder-bag.jpg",
-    "s": "Shoulder Bags"
+    "s": "Handbags Shoulder Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -85,7 +95,8 @@
     "c": "Handbags Tote Bag",
     "f": "$299.00",
     "i": "/images/tory-burch/11-ella-tote.jpg",
-    "s": "Totes"
+    "s": "Handbags Tote Bag",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -93,7 +104,8 @@
     "c": "Shoes Flats",
     "f": "$160.00",
     "i": "/images/tory-burch/12-reva-travel-ballet.jpg",
-    "s": "Flats"
+    "s": "Shoes Flats",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -101,7 +113,8 @@
     "c": "Shoes Sandals",
     "f": "$206.00",
     "i": "",
-    "s": "Sandals"
+    "s": "Shoes Sandals",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -109,7 +122,8 @@
     "c": "Shoes Sandals",
     "f": "$149.00",
     "i": "/images/tory-burch/14-miller-cloud-lug-sandal.jpg",
-    "s": "Sandals"
+    "s": "Shoes Sandals",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -117,7 +131,8 @@
     "c": "Handbags Shoulder Bags",
     "f": "$252.00",
     "i": "/images/tory-burch/15-robinson-spazzolato-shoulder-bag.jpg",
-    "s": "Shoulder Bags"
+    "s": "Handbags Shoulder Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -125,7 +140,8 @@
     "c": "Shoes Sandals",
     "f": "$114.00",
     "i": "",
-    "s": "Shoes Sandals"
+    "s": "Shoes Sandals",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -133,7 +149,8 @@
     "c": "Shoes Sneakers",
     "f": "$160.00",
     "i": "",
-    "s": "Sneakers"
+    "s": "Shoes Sneakers",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -141,7 +158,8 @@
     "c": "Handbags Shoulder Bags",
     "f": "$379.00",
     "i": "/images/tory-burch/18-kira-chevron-shoulder-bag.jpg",
-    "s": "Shoulder Bags"
+    "s": "Handbags Shoulder Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -149,7 +167,8 @@
     "c": "Shoes Sandals",
     "f": "$218.00",
     "i": "",
-    "s": "Sandals"
+    "s": "Shoes Sandals",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -157,7 +176,8 @@
     "c": "Handbags Mini Bags",
     "f": "$229.00",
     "i": "",
-    "s": "Crossbody"
+    "s": "Handbags Mini Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -165,7 +185,8 @@
     "c": "Handbags Crossbody Bags",
     "f": "$333.00",
     "i": "",
-    "s": "Handbags Crossbody Bags"
+    "s": "Handbags Crossbody Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -173,7 +194,8 @@
     "c": "Shoes Espadrilles",
     "f": "$172.00",
     "i": "",
-    "s": "Shoes Espadrilles"
+    "s": "Shoes Espadrilles",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -181,7 +203,8 @@
     "c": "Handbags Shoulder Bags",
     "f": "$403.00",
     "i": "",
-    "s": "Shoulder Bags"
+    "s": "Handbags Shoulder Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -189,7 +212,8 @@
     "c": "Shoes Sandals",
     "f": "$345.00",
     "i": "",
-    "s": "Sandals"
+    "s": "Shoes Sandals",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -197,7 +221,8 @@
     "c": "Handbags Mini Bags",
     "f": "$344.00",
     "i": "",
-    "s": "Handbags Mini Bags"
+    "s": "Handbags Mini Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -205,7 +230,8 @@
     "c": "Shoes Espadrilles",
     "f": "$183.00",
     "i": "/images/tory-burch/26-colorblock-espadrille.jpg",
-    "s": "Shoes Espadrilles"
+    "s": "Shoes Espadrilles",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -213,7 +239,8 @@
     "c": "Handbags Crossbody Bags",
     "f": "$432.00",
     "i": "/images/tory-burch/27-fleming-soft-crossbody-bag.jpg",
-    "s": "Crossbody"
+    "s": "Handbags Crossbody Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -221,7 +248,8 @@
     "c": "Handbags Crossbody Bags",
     "f": "$321.00",
     "i": "/images/tory-burch/28-small-mcgraw-bucket-bag.jpg",
-    "s": "Handbags Crossbody Bags"
+    "s": "Handbags Crossbody Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -229,7 +257,8 @@
     "c": "Handbags Shoulder Bags",
     "f": "$321.00",
     "i": "",
-    "s": "Shoulder Bags"
+    "s": "Handbags Shoulder Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -237,7 +266,8 @@
     "c": "Shoes Heels",
     "f": "$333.00",
     "i": "",
-    "s": "Heels"
+    "s": "Shoes Heels",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -245,7 +275,8 @@
     "c": "Shoes Sneakers",
     "f": "$218.00",
     "i": "",
-    "s": "Sneakers"
+    "s": "Shoes Sneakers",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -253,7 +284,8 @@
     "c": "Shoes Flats",
     "f": "$252.00",
     "i": "/images/tory-burch/32-square-toe-loafer.jpg",
-    "s": "Flats"
+    "s": "Shoes Flats",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -261,7 +293,8 @@
     "c": "Shoes Espadrilles",
     "f": "$137.00",
     "i": "",
-    "s": "Shoes Espadrilles"
+    "s": "Shoes Espadrilles",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -269,7 +302,8 @@
     "c": "Handbags Shoulder Bags",
     "f": "$344.00",
     "i": "/images/tory-burch/34-fleming-pochette.jpg",
-    "s": "Handbags Shoulder Bags"
+    "s": "Handbags Shoulder Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -277,7 +311,8 @@
     "c": "Shoes Sneakers",
     "f": "$195.00",
     "i": "",
-    "s": "Sneakers"
+    "s": "Shoes Sneakers",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -285,7 +320,8 @@
     "c": "Handbags Hobo Bags",
     "f": "$275.00",
     "i": "",
-    "s": "Handbags Hobo Bags"
+    "s": "Handbags Hobo Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -293,7 +329,8 @@
     "c": "Handbags Shoulder Bags",
     "f": "$344.00",
     "i": "/images/tory-burch/37-kira-diamond-quilt-small-shoulder-bag.jpg",
-    "s": "Shoulder Bags"
+    "s": "Handbags Shoulder Bags",
+    "_needsVision": true
   },
   {
     "b": "Tory Burch",
@@ -301,6 +338,7 @@
     "c": "Handbags Shoulder Bags",
     "f": "$298.00",
     "i": "/images/tory-burch/38-perry-shoulder-bag.jpg",
-    "s": "Shoulder Bags"
+    "s": "Handbags Shoulder Bags",
+    "_needsVision": true
   }
 ]
