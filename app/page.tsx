@@ -6,6 +6,7 @@ type Product = {
   b: string  // brand
   n: string  // name
   c: string  // category
+  s: string  // subcategory
   f: string  // finalPrice
   i: string  // image
 }
@@ -64,6 +65,7 @@ export default function Home() {
   const [displayCount, setDisplayCount] = useState(50)
   const [selectedBrand, setSelectedBrand] = useState<string>('')
   const [selectedCategory, setSelectedCategory] = useState<string>('')
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('')
   const [searchTerm, setSearchTerm] = useState('')
   const [sortBy, setSortBy] = useState<'name' | 'price'>('name')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
@@ -109,12 +111,17 @@ export default function Home() {
       filtered = filtered.filter(p => p.c === selectedCategory)
     }
 
+    if (selectedSubcategory) {
+      filtered = filtered.filter(p => p.s === selectedSubcategory)
+    }
+
     if (searchTerm) {
       const term = searchTerm.toLowerCase()
       filtered = filtered.filter(p =>
         p.n.toLowerCase().includes(term) ||
         p.b.toLowerCase().includes(term) ||
-        p.c.toLowerCase().includes(term)
+        p.c.toLowerCase().includes(term) ||
+        p.s.toLowerCase().includes(term)
       )
     }
 
@@ -127,14 +134,27 @@ export default function Home() {
 
     setFilteredProducts(filtered)
     setDisplayCount(50) // Reset to 50 when filters change
-  }, [products, selectedBrand, selectedCategory, searchTerm, sortBy])
+  }, [products, selectedBrand, selectedCategory, selectedSubcategory, searchTerm, sortBy])
 
   // Update displayed products when displayCount changes
   useEffect(() => {
     setDisplayedProducts(filteredProducts.slice(0, displayCount))
   }, [filteredProducts, displayCount])
 
-  const categories = Array.from(new Set(products.map(p => p.c))).sort()
+  // Get categories for selected brand (or all if no brand selected)
+  const categories = Array.from(new Set(
+    products
+      .filter(p => !selectedBrand || p.b === selectedBrand)
+      .map(p => p.c)
+  )).sort()
+
+  // Get subcategories for selected category
+  const subcategories = Array.from(new Set(
+    products
+      .filter(p => !selectedBrand || p.b === selectedBrand)
+      .filter(p => !selectedCategory || p.c === selectedCategory)
+      .map(p => p.s)
+  )).sort()
 
   if (loading) {
     return (
@@ -164,7 +184,7 @@ export default function Home() {
       {/* Filters */}
       <div className="bg-luxury-stone/95 sticky top-0 z-10 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             <input
               type="text"
               placeholder="Buscar productos..."
@@ -175,7 +195,11 @@ export default function Home() {
             
             <select
               value={selectedBrand}
-              onChange={(e) => setSelectedBrand(e.target.value)}
+              onChange={(e) => {
+                setSelectedBrand(e.target.value)
+                setSelectedCategory('')
+                setSelectedSubcategory('')
+              }}
               className="px-4 py-3 rounded-sm border border-luxury-stone/30 focus:border-luxury-gold focus:outline-none bg-white"
             >
               <option value="">Todas las marcas</option>
@@ -188,12 +212,28 @@ export default function Home() {
 
             <select
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              onChange={(e) => {
+                setSelectedCategory(e.target.value)
+                setSelectedSubcategory('')
+              }}
               className="px-4 py-3 rounded-sm border border-luxury-stone/30 focus:border-luxury-gold focus:outline-none bg-white"
+              disabled={!selectedBrand}
             >
               <option value="">Todas las categorías</option>
               {categories.map(cat => (
                 <option key={cat} value={cat}>{cat}</option>
+              ))}
+            </select>
+
+            <select
+              value={selectedSubcategory}
+              onChange={(e) => setSelectedSubcategory(e.target.value)}
+              className="px-4 py-3 rounded-sm border border-luxury-stone/30 focus:border-luxury-gold focus:outline-none bg-white"
+              disabled={!selectedCategory}
+            >
+              <option value="">Todas las subcategorías</option>
+              {subcategories.map(sub => (
+                <option key={sub} value={sub}>{sub}</option>
               ))}
             </select>
 
@@ -211,6 +251,7 @@ export default function Home() {
                 onClick={() => {
                   setSelectedBrand('')
                   setSelectedCategory('')
+                  setSelectedSubcategory('')
                   setSearchTerm('')
                 }}
                 className="px-4 py-3 bg-luxury-charcoal text-white rounded-sm hover:bg-luxury-gold transition-colors text-sm"
@@ -250,9 +291,9 @@ export default function Home() {
                 <h3 className="font-serif text-sm text-luxury-charcoal line-clamp-2">
                   {product.n}
                 </h3>
-                <p className="text-xs text-luxury-charcoal/60">{product.c}</p>
+                <p className="text-xs text-luxury-charcoal/60">{product.s}</p>
                 <p className="font-serif text-lg text-luxury-charcoal font-semibold">
-                  ${product.f}
+                  {product.f}
                 </p>
               </div>
             </div>

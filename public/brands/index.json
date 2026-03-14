@@ -1,86 +1,86 @@
 [
   {
-    "name": "Pandora",
-    "slug": "pandora",
-    "count": 2075,
-    "images": 2075,
-    "size_kb": 2579.3
+    "name": "Calvin Klein",
+    "slug": "calvin-klein",
+    "count": 568,
+    "images": 0,
+    "size_kb": 54
   },
   {
-    "name": "Steve Madden",
-    "slug": "steve-madden",
-    "count": 4614,
-    "images": 4610,
-    "size_kb": 905.3
-  },
-  {
-    "name": "Sephora",
-    "slug": "sephora",
-    "count": 3168,
-    "images": 3168,
-    "size_kb": 586.6
-  },
-  {
-    "name": "Michael Kors",
-    "slug": "michael-kors",
-    "count": 1061,
-    "images": 1061,
-    "size_kb": 4268.7
-  },
-  {
-    "name": "Coach",
+    "name": "Coach Outlet",
     "slug": "coach",
     "count": 203,
     "images": 0,
-    "size_kb": 20.1
+    "size_kb": 22
   },
   {
     "name": "Kate Spade",
     "slug": "kate-spade",
     "count": 230,
-    "images": 0,
-    "size_kb": 19.3
-  },
-  {
-    "name": "Tory Burch",
-    "slug": "tory-burch",
-    "count": 38,
-    "images": 0,
-    "size_kb": 3.5
-  },
-  {
-    "name": "Calvin Klein",
-    "slug": "calvin-klein",
-    "count": 568,
-    "images": 0,
-    "size_kb": 49.3
-  },
-  {
-    "name": "Tommy Hilfiger",
-    "slug": "tommy-hilfiger",
-    "count": 652,
-    "images": 0,
-    "size_kb": 58.2
+    "images": 12,
+    "size_kb": 22
   },
   {
     "name": "Lululemon",
     "slug": "lululemon",
     "count": 1365,
     "images": 0,
-    "size_kb": 126.7
+    "size_kb": 140
   },
   {
-    "name": "Victoria's Secret",
-    "slug": "victorias-secret",
-    "count": 1000,
+    "name": "Michael Kors",
+    "slug": "michael-kors",
+    "count": 1061,
+    "images": 65,
+    "size_kb": 122
+  },
+  {
+    "name": "Pandora",
+    "slug": "pandora",
+    "count": 2075,
     "images": 0,
-    "size_kb": 92.0
+    "size_kb": 202
+  },
+  {
+    "name": "Sephora",
+    "slug": "sephora",
+    "count": 3168,
+    "images": 3082,
+    "size_kb": 567
+  },
+  {
+    "name": "Steve Madden",
+    "slug": "steve-madden",
+    "count": 4614,
+    "images": 4587,
+    "size_kb": 696
+  },
+  {
+    "name": "Tommy Hilfiger",
+    "slug": "tommy-hilfiger",
+    "count": 652,
+    "images": 0,
+    "size_kb": 64
+  },
+  {
+    "name": "Tory Burch",
+    "slug": "tory-burch",
+    "count": 38,
+    "images": 20,
+    "size_kb": 4
   },
   {
     "name": "Ulta",
     "slug": "ulta",
     "count": 5332,
     "images": 0,
-    "size_kb": 463.0
+    "size_kb": 515
+  },
+  {
+    "name": "Victoria's Secret",
+    "slug": "victorias-secret",
+    "count": 10,
+    "images": 0,
+    "size_kb": 1
   }
 ]
