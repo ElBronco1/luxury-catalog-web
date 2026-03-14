@@ -71,6 +71,7 @@ export default function Home() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [loadedBrands, setLoadedBrands] = useState<Set<string>>(new Set())
   const [loading, setLoading] = useState(true)
+  const [expandedProduct, setExpandedProduct] = useState<number | null>(null)
 
   // Load brand index
   useEffect(() => {
@@ -277,27 +278,57 @@ export default function Home() {
           ? "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6" 
           : "space-y-4"
         }>
-          {displayedProducts.map((product, idx) => (
-            <div key={idx} className="bg-luxury-cream rounded-sm border border-luxury-stone overflow-hidden hover:shadow-lg transition-shadow">
-              <LazyImage
-                src={product.i}
-                alt={product.n}
-                className="w-full h-full object-cover"
-              />
-              <div className="p-4 space-y-2">
-                <p className="text-xs text-luxury-gold uppercase tracking-widest font-sans">
-                  {product.b}
-                </p>
-                <h3 className="font-serif text-sm text-luxury-charcoal line-clamp-2">
-                  {product.n}
-                </h3>
-                <p className="text-xs text-luxury-charcoal/60">{product.s}</p>
-                <p className="font-serif text-lg text-luxury-charcoal font-semibold">
-                  {product.f}
-                </p>
+          {displayedProducts.map((product, idx) => {
+            const isExpanded = expandedProduct === idx
+            
+            return (
+              <div key={idx} className="bg-luxury-cream rounded-sm border border-luxury-stone overflow-hidden hover:shadow-lg transition-shadow">
+                <LazyImage
+                  src={product.i}
+                  alt={product.n}
+                  className="w-full h-full object-cover"
+                />
+                <div className="p-4 space-y-2">
+                  <p className="text-xs text-luxury-gold uppercase tracking-widest font-sans">
+                    {product.b}
+                  </p>
+                  <h3 className="font-serif text-sm text-luxury-charcoal line-clamp-2">
+                    {product.n}
+                  </h3>
+                  <p className="text-xs text-luxury-charcoal/60">{product.s}</p>
+                  <p className="font-serif text-lg text-luxury-charcoal font-semibold">
+                    {product.f}
+                  </p>
+                  
+                  {/* Expandable Details Button */}
+                  <button
+                    onClick={() => setExpandedProduct(isExpanded ? null : idx)}
+                    className="w-full mt-3 py-2 text-xs font-sans uppercase tracking-wide text-luxury-charcoal/60 hover:text-luxury-gold transition-colors border-t border-luxury-stone/30 pt-3"
+                  >
+                    {isExpanded ? '− Ocultar detalles' : '+ Ver detalles'}
+                  </button>
+                  
+                  {/* Expanded Details */}
+                  {isExpanded && (
+                    <div className="mt-3 pt-3 border-t border-luxury-stone/30 space-y-2 text-xs">
+                      <div className="flex justify-between">
+                        <span className="text-luxury-charcoal/60 font-sans uppercase tracking-wide">Marca:</span>
+                        <span className="text-luxury-charcoal font-sans">{product.b}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-luxury-charcoal/60 font-sans uppercase tracking-wide">Categoría:</span>
+                        <span className="text-luxury-charcoal font-sans">{product.c}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-luxury-charcoal/60 font-sans uppercase tracking-wide">Subcategoría:</span>
+                        <span className="text-luxury-charcoal font-sans">{product.s}</span>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         {/* Load More Button */}
