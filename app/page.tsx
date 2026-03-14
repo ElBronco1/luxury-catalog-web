@@ -2,19 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react'
 
-// Helper to get base path from Next.js config
-const getBasePath = () => {
-  if (typeof window !== 'undefined') {
-    // Extract basePath from the current URL path
-    const pathParts = window.location.pathname.split('/')
-    // If URL starts with /luxury-catalog-web/, that's our basePath
-    if (pathParts[1] === 'luxury-catalog-web') {
-      return '/luxury-catalog-web'
-    }
-  }
-  return ''
-}
-
 type Product = {
   b: string  // brand
   n: string  // name
@@ -38,11 +25,7 @@ function LazyImage({ src, alt, className }: { src: string; alt: string; classNam
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLDivElement>(null)
 
-  // Prepend basePath to image URLs
-  const basePath = getBasePath()
-  const fullImageSrc = src && src.startsWith('/') ? `${basePath}${src}` : src
-
-  if (!fullImageSrc || hasError) {
+  if (!src || hasError) {
     return (
       <div ref={imgRef} className="aspect-square bg-gradient-to-br from-luxury-stone to-luxury-cream flex items-center justify-center">
         <div className="text-center p-6">
@@ -62,7 +45,7 @@ function LazyImage({ src, alt, className }: { src: string; alt: string; classNam
       )}
       {isInView && (
         <img
-          src={fullImageSrc}
+          src={src}
           alt={alt}
           className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700`}
           onLoad={() => setIsLoaded(true)}
@@ -87,8 +70,7 @@ export default function Home() {
 
   // Load brand index
   useEffect(() => {
-    const basePath = getBasePath()
-    fetch(`${basePath}/brands/index.json`)
+    fetch('/brands/index.json')
       .then(res => res.json())
       .then(data => {
         setBrandIndex(data)
@@ -104,8 +86,7 @@ export default function Home() {
     const brand = brandIndex.find(b => b.name === selectedBrand)
     if (!brand) return
 
-    const basePath = getBasePath()
-    fetch(`${basePath}/brands/${brand.slug}.json`)
+    fetch(`/brands/${brand.slug}.json`)
       .then(res => res.json())
       .then(data => {
         setProducts(prev => [...prev, ...data])
