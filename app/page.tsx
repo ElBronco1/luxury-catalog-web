@@ -60,6 +60,8 @@ export default function Home() {
   const [brandIndex, setBrandIndex] = useState<BrandIndex[]>([])
   const [products, setProducts] = useState<Product[]>([])
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([])
+  const [displayedProducts, setDisplayedProducts] = useState<Product[]>([])
+  const [displayCount, setDisplayCount] = useState(50)
   const [selectedBrand, setSelectedBrand] = useState<string>('')
   const [selectedCategory, setSelectedCategory] = useState<string>('')
   const [searchTerm, setSearchTerm] = useState('')
@@ -124,7 +126,13 @@ export default function Home() {
     })
 
     setFilteredProducts(filtered)
+    setDisplayCount(50) // Reset to 50 when filters change
   }, [products, selectedBrand, selectedCategory, searchTerm, sortBy])
+
+  // Update displayed products when displayCount changes
+  useEffect(() => {
+    setDisplayedProducts(filteredProducts.slice(0, displayCount))
+  }, [filteredProducts, displayCount])
 
   const categories = Array.from(new Set(products.map(p => p.c))).sort()
 
@@ -228,7 +236,7 @@ export default function Home() {
           ? "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6" 
           : "space-y-4"
         }>
-          {filteredProducts.map((product, idx) => (
+          {displayedProducts.map((product, idx) => (
             <div key={idx} className="bg-luxury-cream rounded-sm border border-luxury-stone overflow-hidden hover:shadow-lg transition-shadow">
               <LazyImage
                 src={product.i}
@@ -250,6 +258,18 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        {/* Load More Button */}
+        {displayCount < filteredProducts.length && (
+          <div className="text-center mt-12">
+            <button
+              onClick={() => setDisplayCount(prev => prev + 50)}
+              className="px-8 py-4 bg-luxury-gold text-luxury-charcoal font-serif text-lg rounded-sm hover:bg-luxury-charcoal hover:text-luxury-cream transition-colors shadow-md"
+            >
+              Cargar más productos ({filteredProducts.length - displayCount} restantes)
+            </button>
+          </div>
+        )}
       </div>
     </div>
   )
