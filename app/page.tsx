@@ -38,7 +38,11 @@ function LazyImage({ src, alt, className }: { src: string; alt: string; classNam
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLDivElement>(null)
 
-  if (!src || hasError) {
+  // Prepend basePath to image URLs
+  const basePath = getBasePath()
+  const fullImageSrc = src && src.startsWith('/') ? `${basePath}${src}` : src
+
+  if (!fullImageSrc || hasError) {
     return (
       <div ref={imgRef} className="aspect-square bg-gradient-to-br from-luxury-stone to-luxury-cream flex items-center justify-center">
         <div className="text-center p-6">
@@ -58,7 +62,7 @@ function LazyImage({ src, alt, className }: { src: string; alt: string; classNam
       )}
       {isInView && (
         <img
-          src={src}
+          src={fullImageSrc}
           alt={alt}
           className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700`}
           onLoad={() => setIsLoaded(true)}
