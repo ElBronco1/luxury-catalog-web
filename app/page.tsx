@@ -2,6 +2,19 @@
 
 import { useState, useEffect, useRef } from 'react'
 
+// Helper to get base path from Next.js config
+const getBasePath = () => {
+  if (typeof window !== 'undefined') {
+    // Extract basePath from the current URL path
+    const pathParts = window.location.pathname.split('/')
+    // If URL starts with /luxury-catalog-web/, that's our basePath
+    if (pathParts[1] === 'luxury-catalog-web') {
+      return '/luxury-catalog-web'
+    }
+  }
+  return ''
+}
+
 type Product = {
   b: string  // brand
   n: string  // name
@@ -70,7 +83,8 @@ export default function Home() {
 
   // Load brand index
   useEffect(() => {
-    fetch('/brands/index.json')
+    const basePath = getBasePath()
+    fetch(`${basePath}/brands/index.json`)
       .then(res => res.json())
       .then(data => {
         setBrandIndex(data)
@@ -86,7 +100,8 @@ export default function Home() {
     const brand = brandIndex.find(b => b.name === selectedBrand)
     if (!brand) return
 
-    fetch(`/brands/${brand.slug}.json`)
+    const basePath = getBasePath()
+    fetch(`${basePath}/brands/${brand.slug}.json`)
       .then(res => res.json())
       .then(data => {
         setProducts(prev => [...prev, ...data])
